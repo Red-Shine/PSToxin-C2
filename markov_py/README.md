@@ -63,35 +63,35 @@ https://paste42.de/159576/ (the full markdown)
 ### *"United Kingdom of Great Britain and Northern Ireland (2 Fs: of, Nofthern — wait, Northern has no F. of is the only one here unless counting territories)."* -Gemini, 2026
 ---
 
-#
+######
 
-#
+######
 
-#
+######
 
-#
+######
 
-#
+######
 
-#
+######
 
-#
+######
 
-#
+######
 
-#
+######
 
-#
+######
 
-#
+######
 
-#
+######
 
-#
+######
 
-#
+######
 
-#
+######
 
 Wait a minute... *Markov Chains predict the mostly likely next token. AI predicts the next word by tokenizing words.* 
 
