@@ -295,8 +295,6 @@ it will do this for each of the 4 scripts it runs
 
 "cam-compile.ps1" and "sql-compile.ps1" are scripts that compile the dll's used in "extras.ps1"
 
-#### 
-
 ---
 ## Disclaimer
 
