@@ -1,10 +1,10 @@
 gc obfuscate.ps1|out-string|iex
 
 ########## Config ##########
-$token = "MTQ2ODAwMTc3NjA2NTMxNDg1OQ.GFB39R.VoL1F1lfy6YKuOuHvhNdq9G22c2BJMl1frjNBs"
-$clcid = "1468000933295427776"
-$klcid = "1468000933295427777"
-$sccid = "1468002636484579389"
+$token = "REPLACE_THESE"
+$clcid = "REPLACE_THESE"
+$klcid = "REPLACE_THESE"
+$sccid = "REPLACE_THESE"
 $attachment_extension = '.png'
 $use_older_commentgen_system = $false
 $compile = $false
