@@ -85,7 +85,7 @@ well, basically if you try upload a file and it is blocked by Discord, you can d
 
 this will turn it into a special bitmap that can decoded by the attachment handler, but is literally just a bitmap, making it far less likely to be blocked by Discord
 
-it also looks kinda when you open it in a image viewer
+it also looks kinda cool when you open it in a image viewer
 
 ---
 ### Extra Features
@@ -174,7 +174,7 @@ gdi-blackout -s (duration in seconds)
 
 #### Internal Commands and Variables (Advanced)
 
-these are commands and constants that are mostly for internal use by the other commands, but you can use as well, the only catch is that i will not be documenting any of these
+these are commands and constants that are mostly for internal use by the other commands, but you can use them as well, the only catch is that i will not be documenting any of these
 
 upload -file (file to upload)
 
@@ -236,7 +236,7 @@ $e = ([type]"Text.Encoding")::"UTF8"."GetString"(([type]"Convert")::"FromBase64S
 #
 these strings can be encrypted, and the obfuscator will find each string in the payload and encrypt it
 
-in fact, the embedded payloads in "build.ps1" are written in such a way that, aside from keywords, most of the code is actually strings, so almost everything will encrypted
+in fact, the embedded payloads in "build.ps1" are written in such a way that most of the code is actually strings, so almost everything will encrypted
 #
 there is also a decryption function ($decryptor_func) that is added onto the beginning of every PSToxin payload
 this function recieves its own special obfuscation that randomizes the casing of everything
@@ -257,7 +257,7 @@ it is trained on various powershell administration scripts i scraped from GitHub
 
 #### Anti Sandbox and Language Mode Verification
 
-these two work together to ensure the environment it is being ran in is the environment we want to run it in
+these two work together to ensure the environment PSToxin is being ran in is the environment we want to run it in
 
 the anti sandbox feature ensures it is not being ran in a virtual machine by checking one class it randomly selected from a certain set of WMI classes
 
@@ -292,7 +292,7 @@ it will do this for each of the 4 scripts it runs
 
 #### Downloader Shortcut Generator
 
-"host.ps1" generates a shortcut that downloads and executes the PSToxin payload from a specified url
+"host.ps1" generates a shortcut that downloads and executes a PSToxin payload from a specified url
 
 #### Compile Scripts
 
