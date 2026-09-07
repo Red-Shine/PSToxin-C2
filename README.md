@@ -78,11 +78,13 @@ this feature will send a screen of the computer every 5 seconds to a specified c
 #### Attachment Handler
 
 if you upload a file attachment to the command line channel, it will automatically be uploaded to the computer, unless its a .ps1 script, in which it will automatically be executed as code
+
 or if it has the special encoded bitmap extension, what is that?
 
 well, basically if you try upload a file and it is blocked by Discord, you can drag and drop it onto the special "ConvertToBitmap.exe"
 
 this will turn it into a special bitmap that can decoded by the attachment handler, but is literally just a bitmap, making it far less likely to be blocked by Discord
+
 it also looks kinda when you open it in a image viewer
 
 ---
@@ -214,6 +216,7 @@ these are features that dont fit into either of the other categories
 this feature will individually encrypt strings, methods, types and cmdlets in PSToxin payloads
 
 this feature is possible due the fact that strings can be converted to types using the "[type]" type
+
 and because PowerShell allows method names to be strings
 
 strings can also be interpreted as cmdlets if you use the "&" invoke operator
