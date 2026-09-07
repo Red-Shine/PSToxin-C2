@@ -49,6 +49,7 @@ WHAT, IT REVERSED ITS OWN INSANITY?: https://chatgpt.com/s/t_6a47f07ad29081919fc
 thats enough for now, i think the ai has truely lost it at this point: https://chatgpt.com/s/t_6a47f086561c81918b7d234c39c2128d
 
 and im not just picking on chatgpt either (this one i asked it for multiple g's): 
+
 https://copilot.microsoft.com/shares/51c5AT7vpMKrWgrfxK2os
 https://copilot.microsoft.com/shares/PjvyDRzpupsLE4C9vvzvV
 
