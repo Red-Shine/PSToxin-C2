@@ -226,7 +226,7 @@ $button = &"New-Object" "Windows.Forms.Button"
 $button."Location" = &"New-Object" "Drawing.Point"(20,90)
 $button."Size" = &"New-Object" "Drawing.Size"(100,30)
 $button."Text" = "Submit"
-$button."Add_Click"({(([type]"Windows.Forms.MessageBox")::"Show")."invoke"(("Hello, $($textBox."Text")!","Greeting","OK","Information"))})
+$button."Add_Click"({([type]"Windows.Forms.MessageBox")::"Show"."invoke"(("Hello, $($textBox."Text")!","Greeting","OK","Information"))})
 $form."Controls"."Add"($button)
 $null = $form."ShowDialog"()
 '@
