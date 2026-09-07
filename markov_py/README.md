@@ -53,6 +53,7 @@ https://copilot.microsoft.com/shares/51c5AT7vpMKrWgrfxK2os
 https://copilot.microsoft.com/shares/PjvyDRzpupsLE4C9vvzvV
 
 here is gemini having an absolute meltdown (they are screenshots because google doesn't have the option share conversations for some reason):
+
 https://www.dropbox.com/scl/fi/d19615ypnb8hoxnr8scy9/Screenshot-2026-09-06-155913.png?rlkey=ub7j66xdniruhjevx7kf7ebpa&st=290kce1z&dl=0
 https://www.dropbox.com/scl/fi/6ke57roylpqpye6srryru/Screenshot-2026-09-06-160729.png?rlkey=b0mnf4h2nu4u4b47mcx4jqzn9&st=x1bmmsl0&dl=0
 https://paste42.de/159576/ (the full markdown)
