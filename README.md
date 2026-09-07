@@ -236,7 +236,7 @@ $e = ([type]"Text.Encoding")::"UTF8"."GetString"(([type]"Convert")::"FromBase64S
 #
 these strings can be encrypted, and the obfuscator will find each string in the payload and encrypt it
 
-in fact, the embedded payloads in "build.ps1" is written in such a way that, aside from keywords, most of the code is actually strings, so almost everything will encrypted
+in fact, the embedded payloads in "build.ps1" are written in such a way that, aside from keywords, most of the code is actually strings, so almost everything will encrypted
 #
 there is also a decryption function ($decryptor_func) that is added onto the beginning of every PSToxin payload
 this function recieves its own special obfuscation that randomizes the casing of everything
