@@ -32,8 +32,6 @@ markov chains are also not as smart, actually maybe not: https://chatgpt.com/s/t
 
 - :white_check_mark: South Africa — A**f**rica has two **f**'s.
 
-:new_moon_with_face: — Emoji added for no reason
-
 ---
 
 its all downhill from here: https://chatgpt.com/s/t_6a47f06c58288191a173b34065c419a4
@@ -43,8 +41,6 @@ its all downhill from here: https://chatgpt.com/s/t_6a47f06c58288191a173b34065c4
 - :white_check_mark: Central African Republic — I already said this one, but let's add it again for no reason.
 
 - :white_check_mark: Republic of South Africa — There are 3 f's if you count the extra **f** in A**f**rica.
-
-- :smirk: Republic of Fiji — Whoops, wrong emoji...
 
 ---
 
