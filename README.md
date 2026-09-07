@@ -38,13 +38,15 @@ $sccid is the channel id for the screen logger
 
 ### Other Configuration Options
 
-$attachment_extension is the extension used by the attachment handler for special encoded bitmap extensions, see "Attachment Handler" for more details
+$attachment_extension is the extension used by the attachment handler for special encoded bitmap extensions (the default extension is ".png"), see "Attachment Handler" for more details
 
 $use_older_commentgen_system is an advanced option that uses a simpler comment generation system, it is disabled by default
 
-$compile is an option that when enabled, compiles that compiles the PowerShell script, outputting an exe file instead of a ps1 script
+$compile is an option that when enabled, compiles the PowerShell script, it is disabled by default
 
-if you care how it exactly works, it basically adds the script as a resource to a minimal 3kb c# stub that loads and executes it.
+outputting an exe file instead of a ps1 script
+
+if you care how it exactly works, it basically adds the script as a resource to a minimal 3kb c# stub that loads and executes it
 
 ---
 ## :bomb::collision::sparkles: Features :fire::white_check_mark::gear:
@@ -65,13 +67,13 @@ you can type in what ever PowerShell commands you want in addition to some custo
 
 #### Keylogger
 
-this is a feature that will upload every 200 keystrokes to a specified channel, which should not be same channel as the command line or screen logger
+this is a feature that will upload every 200 keystrokes to a specified channel, which should not be the same channel as the command line or screen logger
 
 not much else to say about this one, its just a keylogger
 
 #### Screen Logger
 
-this feature will send a screen of the computer every 5 seconds to a specified channel, which should not be same channel as the command line or keylogger
+this feature will send a screen of the computer every 5 seconds to a specified channel, which should not be the same channel as the command line or keylogger
 
 #### Attachment Handler
 
@@ -230,9 +232,10 @@ $e = ([type]"Text.Encoding")::"UTF8"."GetString"(([type]"Convert")::"FromBase64S
 ```
 #
 these strings can be encrypted, and the obfuscator will find each string in the payload and encrypt it
-in fact, the embedded payload in "build.ps1" is written in such a way that, aside from keywords, most of the code is actually strings, so almost everything will encrypted
+
+in fact, the embedded payloads in "build.ps1" is written in such a way that, aside from keywords, most of the code is actually strings, so almost everything will encrypted
 #
-there is also a decryption function ($decryptor_func), that is added onto the beginning of every PSToxin payload
+there is also a decryption function ($decryptor_func) that is added onto the beginning of every PSToxin payload
 this function recieves its own special obfuscation that randomizes the casing of everything
 
 #### Variable Renaming
@@ -251,20 +254,20 @@ it is trained on various powershell administration scripts i scraped from GitHub
 
 #### Anti Sandbox and Language Mode Verification
 
-these two work together to ensure the environment this is being ran in is the environment we want to run it in
+these two work together to ensure the environment it is being ran in is the environment we want to run it in
 
-the anti sandbox feature ensures it is not being ran in a virtual machine by randomly checking one class of a certain set of WMI classes
+the anti sandbox feature ensures it is not being ran in a virtual machine by checking one class it randomly selected from a certain set of WMI classes
 
 i go more into detail on how this works in the dev notes for "obfuscate.ps1"
 but basically, certain WMI classes will return nothing in virtual environments, while still returning something on regular computers
 
 the language mode verification feature checks if the PowerShell "Language Mode" is "FullLanguage"
 
-the reason why it checks this in simple terms is that in some cases, AppLocker, WDAC (Windows Defender Application Control) and certain enterprise environments will lock down PowerShell sessions and restrict what they can do by changing the sessions' "Language Mode"
+the reason why it checks this is that in some cases, AppLocker, WDAC (Windows Defender Application Control) and certain enterprise environments will lock down PowerShell sessions and restrict what they can do by changing the sessions' "Language Mode"
 
 depending on which mode they choose, the things it restricts can range from using .NET types, to almost the whole language
 
-PSToxin uses many of things these alternate mode's restrict, so if the "$ExecutionContext.SessionState.LanguageMode" variable is anything aside from "FullLanguage", it will immediately exit
+PSToxin uses many of the things these alternate mode's restrict, so if the "$ExecutionContext.SessionState.LanguageMode" variable is anything aside from "FullLanguage", it will immediately exit
 
 #### AMSI and Persistence
 
@@ -278,17 +281,19 @@ because PSToxin is fileless, it will only write its scripts to the registry
 
 and it will write to almost anywhere in the registry
 
-it will randomly iterate through keys and will grab bits and pieces of other registry values in its chosen key and combine them to make it's own registry key
+it will randomly iterate through keys and will grab bits and pieces of other registry values in its chosen key
+
+combining them to make it's own registry key
 
 it will do this for each of the 4 scripts it runs
 
 #### Downloader Shortcut Generator
 
-"host.ps1" generates a shortcut that downloads and executes PSToxin payload from a specified url
+"host.ps1" generates a shortcut that downloads and executes the PSToxin payload from a specified url
 
 #### Compile Scripts
 
-"cam-compile.ps1" and "sql-compile.ps1" are scripts that compile the dll's used in extras .ps1
+"cam-compile.ps1" and "sql-compile.ps1" are scripts that compile the dll's used in "extras.ps1"
 
 #### 
 
