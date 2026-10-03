@@ -9,7 +9,7 @@ $key is the encryption key used by the encryptor and attachment handler
 
 $use_older_commentgen_system is an advanced option that uses a simpler comment generation system, it is disabled by default
 
-$compile is an option that compiles the PowerShell script into a Windows executable script when enabled, it is disabled by default
+$compile is an option that compiles the PowerShell script into a Windows executable when enabled, it is disabled by default
 #>
 
 ########## Config ##########
